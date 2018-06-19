@@ -11,15 +11,17 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace DiyanetNamazVakitleri.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class TimesController : ApiController
     {
         [HttpGet]
         public IHttpActionResult GetPrayerTimes(int? stateID)
         {
-            if (stateID == null) return Json("State ID is null");
+            if (stateID == null) return Json("0");
             Times tm = new Times();
             try
             {
@@ -63,7 +65,7 @@ namespace DiyanetNamazVakitleri.Controllers
             }
             catch (Exception ex)
             {
-                return Json("An error occured");
+                return Json("-1");
             }
             return Json(tm);
         }
@@ -92,14 +94,14 @@ namespace DiyanetNamazVakitleri.Controllers
             }
             catch (Exception)
             {
-                return Json("An error occured");
+                return Json("-1");
             }
             return Json(countries);
         }
         [HttpGet]
         public IHttpActionResult GetCities(int? countryID)
         {
-            if (countryID == null) return Json("Country ID is null");
+            if (countryID == null) return Json("0");
             List<Cities> cities = new List<Cities>();
             try
             {
@@ -121,7 +123,7 @@ namespace DiyanetNamazVakitleri.Controllers
             }
             catch (Exception)
             {
-                return Json("An error occured");
+                return Json("-1");
             }
             return Json(cities);
         }
@@ -129,8 +131,7 @@ namespace DiyanetNamazVakitleri.Controllers
         [HttpGet]
         public IHttpActionResult GetDistricts(int? countryID, int? cityID)
         {
-            if (countryID == null) return Json("Country ID is null");
-            if (cityID == null) return Json("City ID is null");
+            if (countryID == null || cityID==null) return Json("0");
             List<Districts> districts = new List<Districts>();
             try
             {
@@ -153,7 +154,7 @@ namespace DiyanetNamazVakitleri.Controllers
             }
             catch (Exception)
             {
-                return Json("An error occured");
+                return Json("-1");
             }
             return Json(districts);
         }
