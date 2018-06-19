@@ -76,7 +76,7 @@ Diyanet İşleri'nin resmi web sitesinden ilçeye göre namaz vakitlerini alan v
 ]
 ``` 
 
-**NOTLAR**
+### NOTLAR
 **Hatalı İstekler**
 
 ```
