@@ -4,10 +4,10 @@ Diyanet İşleri'nin resmi web sitesinden ilçeye göre namaz vakitlerini alan v
 ## Endpoint Listesi ve İşlevleri :
 
 ### GET Method - *GetPrayerTimes()*
-**PARAMETRELER** 
+** - PARAMETRELER** 
   * **stateID, int:** *GetDistricts()*'den dönen Districts listesinden bir ID verilmelidir.
 
-**RESPONSE** 
+** - RESPONSE** 
 ```json
 {
 "Date": "19 Haziran Salı 2018",
@@ -21,7 +21,7 @@ Diyanet İşleri'nin resmi web sitesinden ilçeye göre namaz vakitlerini alan v
 ``` 
 ### GET Method - *GetCountries()*
 
-**RESPONSE** 
+** - RESPONSE** 
 ```json
 [
    {
