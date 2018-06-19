@@ -3,7 +3,7 @@ Diyanet İşleri'nin resmi web sitesinden ilçeye göre namaz vakitlerini alan v
 
 ## Endpoint Listesi ve İşlevleri :
 
-### GET Method - GetPrayerTimes()
+### GET Method - *GetPrayerTimes()*
 **PARAMETRELER** 
   * **stateID, int:** *GetDistricts()*'den dönen Districts listesinden bir ID verilmelidir.
 
@@ -19,47 +19,41 @@ Diyanet İşleri'nin resmi web sitesinden ilçeye göre namaz vakitlerini alan v
 "Yatsi": "22:37"
 }
 ``` 
-### GET Method - GetCountries()
+### GET Method - *GetCountries()*
 
 **RESPONSE** 
 ```json
 [
-{
-"ID": 33,
-"Country": "ABD"
-},
-{
-"ID": 166,
-"Country": "AFGANISTAN"
-}
-.
-.
-.
+   {
+   "ID": 33,
+   "Country": "ABD"
+   },
+   {
+   "ID": 166,
+   "Country": "AFGANISTAN"
+   }
 ]
 ``` 
-### GET Method - GetCities()
+### GET Method - *GetCities()*
 **PARAMETRELER** 
   * **countryID, int:** *GetCountries()*'den dönen Countries listesinden bir ID verilmelidir.
 
 **RESPONSE** 
 ```json
 [
-{
-"ID": 500,
-"CountryID": 2,
-"CityName": "ADANA"
-},
-{
-"ID": 501,
-"CountryID": 2,
-"CityName": "ADIYAMAN"
-}
-.
-.
-.
+   {
+   "ID": 500,
+   "CountryID": 2,
+   "CityName": "ADANA"
+   },
+   {
+   "ID": 501,
+   "CountryID": 2,
+   "CityName": "ADIYAMAN"
+   }
 ]
 ``` 
-### GET Method - GetDistricts()
+### GET Method - *GetDistricts()*
 **PARAMETRELER** 
   * **countryID, int:** *GetCountries()*'den dönen Countries listesinden bir ID verilmelidir.
   * **cityID, int:** *GetCities()*'den dönen Cities listesinden bir ID verilmelidir.
@@ -67,21 +61,18 @@ Diyanet İşleri'nin resmi web sitesinden ilçeye göre namaz vakitlerini alan v
 **RESPONSE** 
 ```json
 [
-{
-"ID": 9535,
-"CountryID": 2,
-"CityID": 539,
-"DistrictName": "ARNAVUTKOY"
-},
-{
-"ID": 17865,
-"CountryID": 2,
-"CityID": 539,
-"DistrictName": "AVCILAR"
-}
-.
-.
-.
+   {
+   "ID": 9535,
+   "CountryID": 2,
+   "CityID": 539,
+   "DistrictName": "ARNAVUTKOY"
+   },
+   {
+   "ID": 17865,
+   "CountryID": 2,
+   "CityID": 539,
+   "DistrictName": "AVCILAR"
+   }
 ]
 ``` 
 
