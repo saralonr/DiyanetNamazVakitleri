@@ -6,6 +6,7 @@ Diyanet İşleri'nin resmi web sitesinden ilçeye göre namaz vakitlerini alan v
 ### GET Method - *GetPrayerTimes()*
 **- PARAMETRELER** 
   * **stateID, int:** *GetDistricts()*'den dönen Districts listesinden bir ID verilmelidir.
+  
 **- REQUEST**
 ```
  http://localhost/api/times/GetPrayerTimes?stateID={stateID}
@@ -44,6 +45,7 @@ Diyanet İşleri'nin resmi web sitesinden ilçeye göre namaz vakitlerini alan v
 ### GET Method - *GetCities()*
 **- PARAMETRELER** 
   * **countryID, int:** *GetCountries()*'den dönen Countries listesinden bir ID verilmelidir.
+  
 **- REQUEST**
 ```
  http://localhost/api/times/GetCities?countryID={countryID}
@@ -72,6 +74,7 @@ Diyanet İşleri'nin resmi web sitesinden ilçeye göre namaz vakitlerini alan v
 ```
  http://localhost/api/times/GetDistricts?countryID={countryID}&cityID={cityID}
 ```
+
 **- RESPONSE** 
 ```json
 [
